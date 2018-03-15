@@ -1,0 +1,97 @@
+// 公用的颜色样式
+// 字体色
+
+// #aaa 到 #eee
+$base-color-list: a, b, c, d, e;
+@each $i in $base-color-list {
+  .c-#{$i}#{$i}#{$i} {
+    color: #{"#"}#{$i}#{$i}#{$i};
+  }
+}
+
+// #333 主标题
+// #999 副标题
+// #666 内容文字
+@for $i from 1 through 3 {
+  .c#{$i*3}#{$i*3}#{$i*3} {
+    color: #{"#"}#{$i*3}#{$i*3}#{$i*3};
+  }
+}
+
+// 网站基础颜色
+$color-list: (
+  main: #4c8dfc,
+  second: #ff764c,
+  inverse: #c8dcff,
+  big-blue: #e7feff,
+  body: #f8f8f8,
+  border: #ededed,
+  tip: #ff8a2b,
+  white: #fff
+);
+@each $key, $val in $color-list {
+  .c-#{$key} {
+    color: $val;
+  }
+  .bg-#{$key} {
+    background-color: $val;
+  }
+}
+.bg-ccc {
+  background-color: #ccc;
+}
+.bg-light-yellow {
+  background-color: #f8f3d4;
+}
+.bg-df {
+  background-color: #dfdfdf;
+}
+.c-a5 {
+  color: #a5a5a5;
+}
+.c-me-star {
+  color: #ffbf17;
+}
+.c-me-invite {
+  color: #3ac992;
+}
+.c-me-about {
+  color: #f29d52;
+}
+
+.box {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.border-top {
+  border-top: 1px solid #f2f2f2;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #f2f2f2;
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.border-bottom-one {
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.border-right {
+  border-right: 1px solid #f2f2f2;
+}
+
+input::placeholder {
+  color: #999!important;
+}
+
+a:hover {
+  color: #4c8dfc;
+}
+
+.hover-white:hover {
+  color: #fff;
+}
