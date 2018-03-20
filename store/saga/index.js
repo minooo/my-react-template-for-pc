@@ -5,7 +5,7 @@ import { http } from "@utils"
 
 function* loadUsers() {
   try {
-    const res = yield http.get("")
+    const res = yield http.get("users")
     yield put(getUsers(res))
   } catch (err) {
     console.info(err)
